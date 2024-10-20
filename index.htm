@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodLibrary - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Logo will be visible only on desktop -->
+        <div class="logo">
+            <img src="logo.png" alt="Food Library Logo">
+            
+        </div>
+        
+        <!-- Hamburger Menu Icon for Mobile View -->
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <nav id="mobile-nav" class="mobile-nav hidden">
+            <ul>
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="Recipes.htm">Recipes</a></li>
+                <li><a href="ShareRecipes.htm">Share Recipe</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Desktop Navigation (Visible on Desktop) -->
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="Recipes.htm">Recipes</a></li>
+                <li><a href="ShareRecipes.htm">Share Recipe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="content">
+                <h1>Discover Dishes Around The World</h1>
+                <p>The home of different food dishes gathered in one place.<br>Discover different food dishes within our FoodLibrary.</p>
+                <div class="buttons">
+                    <a href="Recipes.htm" class="btn">Discover Recipes</a>
+                    <a href="ShareRecipes.htm" class="btn">Share Recipe</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Copyright 2024. All rights reserved. Created by Adan Josh Quiambao.</p>
+        <p><a href="#">FoodLibrary.com</a></p>
+    </footer>
+
+    <!-- JavaScript to toggle the menu -->
+    <script src="scripts.js"></script>
+</body>
+</html>

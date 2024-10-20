@@ -1,0 +1,373 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FDF4E6;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #F6C667;
+  padding: 3px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+} 
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo img {
+  width: 100px; /* Reduced for tablet view */
+  height: 70px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px; /* Adjusted for smaller screen */
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 22px; /* Reduced font size for tablet */
+  font-weight: 400;
+  color: #000000;
+}
+
+/* Hero Section */
+.hero {
+  background: url(Home_food.jpg) no-repeat center center/cover;
+  height: calc(100vh - 100px); /* Adjust for tablet view */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero .content {
+  text-align: center;
+  color: #000000;
+  max-width: 700px; /* Adjusted for tablet */
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: 'Inria Serif', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2.8rem; /* Reduced size for tablet */
+  margin-bottom: 25px;
+}
+
+.hero p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem; 
+  margin-bottom: 25px;
+}
+
+.hero .buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+
+.btn {
+  background-color: #F6C667;
+  border-radius: 100px;
+  padding: 12px 25px; 
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px; 
+  color: #000000;
+  text-decoration: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Footer */
+footer {
+  background-color: #F6C667;
+  padding: 10px;
+  text-align: center;
+  position: relative; 
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 14px; 
+  color: #000000;
+}
+
+footer a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Hamburger menu styling */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  margin-right: 360px;
+}
+
+.hamburger-menu .bar {
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+  
+}
+
+/* Mobile Navigation Styles */
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.mobile-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 40px;
+}
+
+.mobile-nav ul li {
+  border-bottom: 1px solid #e0b768;
+}
+
+.mobile-nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Remove the logo and desktop navigation on mobile */
+@media (max-width: 768px) {
+  .logo {
+      display: none;
+  }
+
+  .hamburger-menu {
+      display: flex;
+  }
+
+  header {
+    padding: 10px 15px;
+    justify-content: flex-end;
+  }
+
+  .desktop-nav {
+      display: none;
+  }
+
+  .mobile-nav.show {
+      display: block;
+  }
+}
+
+/* Responsive Design for Tablet (1024x1366) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero h1 {
+      font-size: 4.4rem; /* Resize hero text for tablets */
+      line-height: 70px;
+  }
+
+  .hero p {
+      font-size: 1.5rem; /* Adjust paragraph font for tablets */
+  }
+
+  .btn {
+      font-size: 20px; /* Reduced button text */
+      padding: 12px 25px; /* Adjust button padding */
+  }
+
+  
+
+  /* Adjust footer font size for tablet */
+  footer {
+    font-size: 14px;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: auto;
+    width: 100%; 
+}
+}
+
+/* Responsive Design for Mobile (430px) */
+@media screen and (max-width: 768px) {
+  /* Display Hamburger Menu on Mobile */
+  .logo {
+    display: none;
+}
+
+.hamburger-menu {
+    display: flex;
+}
+
+header {
+    padding: 10px 15px;
+    justify-content: flex-end;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.mobile-nav.show {
+    display: block;
+}
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+  .hero{
+    background: #FDF4E6;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .hero p {
+    font-size: 12px;
+    line-height: 30px;
+  }
+
+  .logo img {
+    display: none;
+  }
+}
+
+/* Global Print Styles for All Devices */
+@media print {
+  body {
+      background-color: white; /* Ensure white background for print */
+      color: black; /* Black text for better visibility */
+  }
+  
+  /* Hide elements that aren't needed in print */
+  .hamburger-menu,
+  .mobile-nav,
+  .desktop-nav,
+  .btn {
+      display: none; /* Hide menu and buttons in print */
+  }
+
+  /* Ensure images like the logo are printed properly */
+  .logo img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+  }
+
+  footer {
+      text-align: center;
+      font-size: 12px;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+  }
+
+  section {
+      page-break-before: always; /* Page breaks before sections */
+  }
+}
+
+/* Print Query for Desktop (1920x1080 or larger) */
+@media print and (min-width: 1025px) {
+  .hero h1 {
+      font-size: 2.5rem; /* Larger font size for desktop print */
+  }
+
+  .hero p {
+      font-size: 1.2rem; /* Slightly larger paragraph font */
+  }
+
+  .hero .content {
+      max-width: 900px; /* Wider content for desktop print */
+  }
+
+}
+
+/* Print Query for Tablet (iPad Pro: 1024x1366) */
+@media print and (min-width: 768px) and (max-width: 1024px) {
+  .hero h1 {
+      font-size: 2rem; /* Adjust font size for tablet print */
+  }
+
+  .hero p {
+      font-size: 1rem; /* Adjust paragraph font for tablet print */
+  }
+
+  .hero .content {
+      max-width: 700px; /* Content width for tablet print */
+  }
+  footer {
+    display: none;
+  }
+
+  
+}
+
+/* Print Query for Mobile (iPhone 14 Pro Max: 430px) */
+@media print and (max-width: 767px) {
+  .hero h1 {
+      font-size: 1.8rem; /* Smaller hero title for mobile print */
+  }
+
+  .hero p {
+      font-size: 0.9rem; /* Smaller paragraph font for mobile print */
+  }
+
+  .hero .content {
+      max-width: 400px; /* Narrower content for mobile print */
+  }
+  footer {
+    display: none
+  }
+
+ 
+}
